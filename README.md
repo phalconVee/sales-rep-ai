@@ -42,77 +42,11 @@ Copy
 !pip install scikit-learn
 ```
 
-1\. Data Structures and Database Schema
----------------------------------------
-
-### Database Models
-
-python
-
-Copy
-
-import sqlalchemy as sa
-
-from sqlalchemy.ext.declarative import declarative_base
-
-from sqlalchemy.orm import relationship
-
-from datetime import datetime
-
-Base = declarative_base()
-
-class  Shop(Base):
-
-__tablename__ =  'shops'
-
-    id  = sa.Column(sa.BigInteger, primary_key=True)
-
-customer_id = sa.Column(sa.BigInteger, nullable=False)
-
-platform = sa.Column(sa.String(255), default='shopify')
-
-shop_domain = sa.Column(sa.String(255), unique=True)
-
-access_token = sa.Column(sa.String(255))
-
-settings = sa.Column(sa.JSON)
-
-is_enabled = sa.Column(sa.Boolean, default=True)
-
-created_at = sa.Column(sa.DateTime, default=datetime.utcnow)
-
-updated_at = sa.Column(sa.DateTime, onupdate=datetime.utcnow)
-
-name = sa.Column(sa.String(255))
-
-class  StoreConfiguration(Base):
-
-__tablename__ =  'store_configurations'
-
-    id  = sa.Column(sa.BigInteger, primary_key=True)
-
-shop_id = sa.Column(sa.BigInteger, sa.ForeignKey('shops.id'))
-
-platform = sa.Column(sa.String(50))
-
-credentials = sa.Column(sa.JSON)
-
-settings = sa.Column(sa.JSON)
-
-api_key = sa.Column(sa.String(255))
-
-created_at = sa.Column(sa.DateTime, default=datetime.utcnow)
-
-updated_at = sa.Column(sa.DateTime, onupdate=datetime.utcnow)
-
-2\. Behavioral Analysis Model
+1\. Behavioral Analysis Model
 -----------------------------
 
-python
 
-Copy
-
-import tensorflow as tf
+```import tensorflow as tf
 
 from tensorflow.keras import layers, Model
 
@@ -165,15 +99,12 @@ engagement_score = layers.Dense(1, activation='sigmoid', name='engagement')(x)
 k: [[v]] for k, v in behavior_data.items()
 
         })
+```
 
-3\. Chat Context Management
+2\. Chat Context Management
 ---------------------------
 
-python
-
-Copy
-
-class  ChatContextManager:
+```class  ChatContextManager:
 
     def  __init__(self, shop_id, platform):
 
@@ -232,81 +163,12 @@ platform = PlatformFactory.create_platform(self.platform)
             'user_context': self.user_context
 
         }
+```
 
-4\. OpenAI Integration
-----------------------
-
-python
-
-Copy
-
-from openai import OpenAI
-
-import os
-
-class  AIService:
-
-    def  __init__(self):
-
-        self.client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-
-    async  def  generate_response(self, messages, store_context=None):
-
-        """Generate AI response with store context"""
-
-system_prompt = self.create_system_prompt(store_context)
-
-response =  await self.client.chat.completions.create(
-
-            model="gpt-4-1106-preview",
-
-            messages=[
-
-                {"role": "system", "content": system_prompt},
-
-                *messages
-
-            ],
-
-            temperature=0.7,
-
-            max_tokens=150
-
-        )
-
-        return response.choices[0].message
-
-    def  create_system_prompt(self, store_context):
-
-        if  not store_context:
-
-            return "You are a helpful shopping assistant."
-
-        return f"""You are a shopping assistant for {store_context['store_settings']['name']}.
-
-Available Products: {store_context['products']}
-
-Current Promotions: {store_context['promotions']}
-
-        Your role is to:
-
-        1. Help customers find products they're looking for
-
-        2. Make personalized recommendations
-
-        3. Answer questions about products and policies
-
-        4. Guide customers through the purchase process
-
-        Always be helpful, professional, and knowledgeable about the store's specific offerings."""
-
-5\. Behavioral Tracking Implementation
+3\. Behavioral Tracking Implementation
 --------------------------------------
 
-python
-
-Copy
-
+```
 class  BehaviorTracker:
 
     def  __init__(self, session_id):
@@ -358,170 +220,4 @@ self.mouse_movements +=  1
             'pageViews': self.page_views
 
         }
-
-6\. Platform Integration
-------------------------
-
-python
-
-Copy
-
-from abc import ABC, abstractmethod
-
-class  EcommercePlatform(ABC):
-
-    @abstractmethod
-
-    async  def  initialize(self, shop_id: int):
-
-        pass
-
-    @abstractmethod
-
-    async  def  get_products(self):
-
-        pass
-
-    @abstractmethod
-
-    async  def  get_store_settings(self):
-
-        pass
-
-class  ShopifyPlatform(EcommercePlatform):
-
-    def  __init__(self):
-
-self.client =  None
-
-self.shop_id =  None
-
-    async  def  initialize(self, shop_id: int):
-
-store_config =  await self.get_store_config(shop_id)
-
-self.client = self.create_client(store_config)
-
-self.shop_id = shop_id
-
-    async  def  get_products(self):
-
-response =  await self.client.get('/products.json')
-
-        return self.normalize_products(response.data['products'])
-
-    async  def  get_store_settings(self):
-
-response =  await self.client.get('/shop.json')
-
-        return self.normalize_store_settings(response.data['shop'])
-
-7\. Running the System
-----------------------
-
-python
-
-Copy
-
-async  def  main():
-
-    # Initialize components
-
-behavior_model = BehavioralModel()
-
-ai_service = AIService()
-
-    # Example usage
-
-shop_id =  1
-
-platform =  'shopify'
-
-    # Create context manager
-
-context = ChatContextManager(shop_id, platform)
-
-store_context =  await context.get_store_context()
-
-    # Initialize behavior tracking
-
-tracker = BehaviorTracker('session_123')
-
-    # Simulate user interaction
-
-user_message =  "I'm looking for a gift under $50"
-
-    context.add_message('user', user_message)
-
-    # Get behavior metrics
-
-behavior = tracker.get_behavior_metrics()
-
-    # Check engagement
-
-engagement_score = behavior_model.predict_engagement(behavior)
-
-    if engagement_score >  0.7:
-
-        # Generate AI response
-
-response =  await ai_service.generate_response(
-
-            context.conversation_history,
-
-            store_context
-
-        )
-
-        print(f"AI Response: {response}")
-
-# Run the system
-
-await main()
-
-Testing
--------
-
-python
-
-Copy
-
-import unittest
-
-class  TestWharfAI(unittest.TestCase):
-
-    async  def  setUp(self):
-
-self.behavior_model = BehavioralModel()
-
-self.ai_service = AIService()
-
-self.context = ChatContextManager(1, 'shopify')
-
-    async  def  test_behavior_tracking(self):
-
-tracker = BehaviorTracker('test_session')
-
-        tracker.track_event('page_view', {})
-
-metrics = tracker.get_behavior_metrics()
-
-        self.assertTrue(metrics['pageViews'] ==  1)
-
-        self.assertTrue(metrics['timeOnPage'] >  0)
-
-    async  def  test_ai_response(self):
-
-response =  await self.ai_service.generate_response([
-
-            {"role": "user", "content": "Hello"}
-
-        ])
-
-        self.assertIsNotNone(response)
-
-        self.assertTrue(len(response.content) >  0)
-
-if __name__ ==  '__main__':
-
-    unittest.main()
+```
