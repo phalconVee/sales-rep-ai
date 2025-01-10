@@ -25,7 +25,7 @@ Copy
 
 # Required packages
 
-!pip install tensorflow
+```!pip install tensorflow
 
 !pip install transformers
 
@@ -40,6 +40,7 @@ Copy
 !pip install numpy
 
 !pip install scikit-learn
+```
 
 1\. Data Structures and Database Schema
 ---------------------------------------
