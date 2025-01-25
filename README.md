@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/ugochukwu-ibecheozor/">
-    <img src="https://img.shields.io/badge/-Follow%20Ugochukwu%20Saboo-blue?logo=linkedin&style=flat-square" alt="LinkedIn">
+    <img src="https://img.shields.io/badge/-Follow%20Ugochukwu%20Ibecheozor-blue?logo=linkedin&style=flat-square" alt="LinkedIn">
   </a>
   <a href="https://x.com/_impact_dev">
     <img src="https://img.shields.io/twitter/follow/_impact_dev" alt="Twitter">
