@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://www.theunwindai.com">
-    <img src="docs/banner/beastmode.png" width="900px" alt="wharf AI">
+    <img src="docs/banner/beastmode.png" width="900px" alt="Fishook AI">
   </a>
 </p>
 
@@ -15,7 +15,7 @@
 
 <hr/>
 
-# 🌟 Wharf AI Sales Agent
+# 🌟 Fishook AI Agent
 
 This notebook implements an LLM and Reinforcement-learning-based AI sales agent for popular e-commerce platforms like Shopify, Woocommerce, etc.
 The system includes:
