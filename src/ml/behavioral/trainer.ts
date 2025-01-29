@@ -1,4 +1,3 @@
-// src/ml/behavioral/trainer.ts
 import { BehavioralPredictor } from './predictor';
 import { trackingService } from '../../services/analytics/tracking.service';
 import { logger } from '../../utils/logger';

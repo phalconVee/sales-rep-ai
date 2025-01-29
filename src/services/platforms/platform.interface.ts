@@ -1,4 +1,3 @@
-// src/services/platforms/platform.interface.ts
 import { Product, Cart, StoreSettings } from '../../interfaces/platform.types';
 
 export interface EcommercePlatform {

@@ -1,4 +1,3 @@
-// src/config/database.ts
 import knex from 'knex';
 import env from './env.config';
 

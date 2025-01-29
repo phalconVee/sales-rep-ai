@@ -1,4 +1,3 @@
-// src/models/chat/message.model.ts
 export interface Message {
     id: string;
     content: string;

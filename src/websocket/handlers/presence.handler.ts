@@ -1,4 +1,3 @@
-// src/websocket/handlers/presence.handler.ts
 import { Server, Socket } from 'socket.io';
 import { logger } from '../../utils/logger';
 import { ChatEvents, PresenceEvent, PresenceStatus } from '../events/types';

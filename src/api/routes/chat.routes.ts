@@ -1,4 +1,3 @@
-// src/api/routes/chat.routes.ts
 import { Router } from 'express';
 import { asyncHandler } from '../../middleware/error.middleware';
 import {

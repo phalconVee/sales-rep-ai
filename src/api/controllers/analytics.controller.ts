@@ -1,4 +1,3 @@
-// src/api/controllers/analytics.controller.ts
 import { Request, Response } from 'express';
 import { trackingService } from '../../services/analytics/tracking.service';
 import { insightsService } from '../../services/analytics/insights.service';

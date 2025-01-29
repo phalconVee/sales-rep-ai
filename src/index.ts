@@ -1,4 +1,3 @@
-// src/index.ts
 import { configureExpress } from './config/express.config';
 import env from './config/env.config';
 import { logger } from './utils/logger';

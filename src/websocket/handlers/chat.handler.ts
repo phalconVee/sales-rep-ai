@@ -1,4 +1,3 @@
-// src/websocket/handlers/chat.handler.ts
 import { Server, Socket } from 'socket.io';
 import { logger } from '../../utils/logger';
 import { db } from '../../config/database';

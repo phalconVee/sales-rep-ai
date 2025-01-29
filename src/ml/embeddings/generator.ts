@@ -1,4 +1,3 @@
-// src/ml/embeddings/generator.ts
 import { openAIService } from '../../services/ai/openai.service';
 import { vectorStoreService } from '../../services/ai/vectorstore.service';
 import { logger } from '../../utils/logger';

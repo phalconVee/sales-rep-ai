@@ -1,4 +1,3 @@
-// src/types/webhook.types.ts
 export interface WebhookPayload {
     type: string;
     payload: any;

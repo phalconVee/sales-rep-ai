@@ -1,4 +1,3 @@
-// src/api/routes/analytics.routes.ts
 import { Router } from 'express';
 import { asyncHandler } from '../../middleware/error.middleware';
 import * as analyticsController from '../controllers/analytics.controller';

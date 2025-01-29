@@ -1,4 +1,3 @@
-// src/models/user/visitor.model.ts
 export interface Visitor {
     id: string;
     sessionId: string;

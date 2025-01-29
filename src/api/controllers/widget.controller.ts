@@ -1,4 +1,3 @@
-// src/api/controllers/widget.controller.ts
 import { Request, Response } from 'express';
 import { db } from '../../config/database';
 import { logger } from '../../utils/logger';

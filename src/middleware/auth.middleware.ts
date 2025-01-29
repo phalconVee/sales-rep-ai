@@ -1,4 +1,3 @@
-// src/middleware/auth.middleware.ts
 import { Request, Response, NextFunction } from 'express';
 import { AppError } from './error.middleware';
 import { parseJwt } from '../utils/helpers';

@@ -1,4 +1,3 @@
-// src/middleware/validation.middleware.ts
 import { Request, Response, NextFunction } from 'express';
 import { z } from 'zod';
 import { AppError } from './error.middleware';

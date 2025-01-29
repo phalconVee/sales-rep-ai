@@ -1,4 +1,3 @@
-// src/api/routes/webhook.routes.ts
 import { Router } from 'express';
 import { asyncHandler } from '../../middleware/error.middleware';
 import * as webhookController from '../controllers/webhook.controller';

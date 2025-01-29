@@ -1,4 +1,3 @@
-// src/services/platforms/platform.factory.ts
 import { EcommercePlatform, PlatformConfig } from './platform.interface';
 import { ShopifyPlatform } from './shopify.platform';
 // import { BigCommercePlatform } from './bigcommerce.platform';

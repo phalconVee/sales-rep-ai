@@ -1,4 +1,4 @@
-// src/config/openai.ts
+
 import OpenAI from 'openai';
 import env from './env.config';
 import { logger } from '../utils/logger';

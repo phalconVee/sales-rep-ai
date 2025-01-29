@@ -1,4 +1,3 @@
-// src/interfaces/platform.types.ts
 export interface Product {
     id: string;
     title: string;

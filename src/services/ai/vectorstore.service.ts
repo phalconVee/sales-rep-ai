@@ -1,4 +1,3 @@
-// src/services/ai/vectorstore.service.ts
 import { PineconeClient } from '@pinecone-database/pinecone';
 import env from '../../config/env.config';
 import { logger } from '../../utils/logger';

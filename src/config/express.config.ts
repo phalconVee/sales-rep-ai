@@ -1,4 +1,3 @@
-// src/config/express.config.ts
 import express, { Express } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';

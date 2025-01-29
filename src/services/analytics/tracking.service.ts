@@ -1,4 +1,3 @@
-// src/services/analytics/tracking.service.ts
 import { logger } from '../../utils/logger';
 
 interface TrackingEvent {

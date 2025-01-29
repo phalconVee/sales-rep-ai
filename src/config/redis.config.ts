@@ -1,4 +1,3 @@
-// src/config/redis.config.ts
 import Redis from 'ioredis';
 import env from './env.config';
 import { logger } from '../utils/logger';

@@ -1,4 +1,3 @@
-// src/services/analytics/insights.service.ts
 import { trackingService } from './tracking.service';
 import { logger } from '../../utils/logger';
 

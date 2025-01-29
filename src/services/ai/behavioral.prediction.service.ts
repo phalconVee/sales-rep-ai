@@ -1,4 +1,3 @@
-// src/services/ai/behavioral.prediction.service.ts
 import { openAIService } from './openai.service';
 import { ShopifyPlatform } from '../platforms/shopify.platform';
 import { logger } from '../../utils/logger';

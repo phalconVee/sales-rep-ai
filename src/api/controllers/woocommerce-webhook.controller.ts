@@ -1,4 +1,3 @@
-// src/api/controllers/woocommerce-webhook.controller.ts
 import { Request, Response } from 'express';
 import { logger } from '../../utils/logger';
 import { db } from '../../config/database';

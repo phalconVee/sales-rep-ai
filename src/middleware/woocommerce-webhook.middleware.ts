@@ -1,4 +1,3 @@
-// src/middleware/woocommerce-webhook.middleware.ts
 import { Request, Response, NextFunction } from 'express';
 import crypto from 'crypto';
 import { AppError } from './error.middleware';

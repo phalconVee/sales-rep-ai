@@ -1,4 +1,3 @@
-// src/utils/token.ts
 import jwt from 'jsonwebtoken';
 import env from '../config/env.config';
 

@@ -1,4 +1,3 @@
-// src/middleware/webhook.middleware.ts
 import { Request, Response, NextFunction } from 'express';
 import crypto from 'crypto';
 import env from '../config/env.config';
