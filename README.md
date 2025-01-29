@@ -15,7 +15,7 @@
 
 <hr/>
 
-# Agentic AI (LLM + RL + Behavioral Analysis) in Omnichannel Sales
+# Agentic AI (LLM + RL + Behavioral Analysis) in E-commerce Sales
 
 This notebook implements an LLM and Reinforcement-learning-based AI sales agent for popular e-commerce platforms like Shopify, Woocommerce, etc.
 The system includes:
