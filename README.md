@@ -32,5 +32,5 @@ The system includes:
 
 
 ## 📂 Featured Paper
-- [💼 Deep Learning Application in Sales Automation and Customer Experience Personalization in SMBs: A Hybrid Approach Using Transformer-Based LLMs and RL](https://www.ijisme.org/portfolio-item/a132113010125/)
+- [📝 Deep Learning Application in Sales Automation and Customer Experience Personalization in SMBs: A Hybrid Approach Using Transformer-Based LLMs and RL](https://www.ijisme.org/portfolio-item/a132113010125/)
 
