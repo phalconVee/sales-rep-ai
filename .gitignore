@@ -2,6 +2,7 @@
 /.idea
 /.vscode
 node_modules/
+logs/
 .DS_Store
 .env
 npm-debug.log*
